@@ -17,13 +17,15 @@ for clusters in  $(gcloud container clusters list --format="value(name)")
 do
   echo "clusters:  $clusters"  
   if [ $clusters == $CLOUDSDK_CONTAINER_CLUSTER ]
+  then
     does_cluster_exists=true
     echo "$CLOUDSDK_CONTAINER_CLUSTER already exists. hence, will not try creating it again."
   fi
 done
 if [ $does_cluster_exists == false ]
-echo "===================================="
-echo "Creating gke cluster"
-echo "===================================="
-gcloud container clusters create $CLOUDSDK_CONTAINER_CLUSTER
+then
+  echo "===================================="
+  echo "Creating gke cluster"
+  echo "===================================="
+  gcloud container clusters create $CLOUDSDK_CONTAINER_CLUSTER
 fi
