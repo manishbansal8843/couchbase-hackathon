@@ -21,7 +21,7 @@ do
     echo "$CLOUDSDK_CONTAINER_CLUSTER already exists. hence, will not try creating it again."
   fi
 done
-if [ $does_cluster_exists == false]
+if [ $does_cluster_exists == false ]
 echo "===================================="
 echo "Creating gke cluster"
 echo "===================================="
