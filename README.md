@@ -14,6 +14,7 @@ Steps:
 # Spawning GKE cluster
 
 1. Open gcloud shell.
+
 2. Set project id and compute/zone in the cloud shell.
 
 ```
@@ -24,6 +25,7 @@ gcloud config set compute/zone us-east1-b
 3. Clone this repo.
 
 `git clone https://github.com/manishbansal8843/couchbase-hackathon.git`
+
 4. Swith directory
 
 `cd couchbase-hackathon/gke-setup`
