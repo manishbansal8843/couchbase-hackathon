@@ -16,28 +16,41 @@ Steps:
 1. Open gcloud shell.
 2. Set project id and compute/zone in the cloud shell.
 
+```
 gcloud config set project couchbase-hackathon
 gcloud config set compute/zone us-east1-b
+```
 
 3. Clone this repo.
-git clone https://github.com/manishbansal8843/couchbase-hackathon.git
-4. Swith directory
-cd couchbase-hackathon/gke-setup
-5. Trigger build
-gcloud builds submit .
 
-This will create a 3 node GKE cluster
+`git clone https://github.com/manishbansal8843/couchbase-hackathon.git`
+4. Swith directory
+
+`cd couchbase-hackathon/gke-setup`
+
+5. Trigger build
+
+`gcloud builds submit .`
+
+This will create a 3 node GKE cluster.
+
 # Installing Couchbase operator and cluster
 
-1. Swith directory
-cd ~/couchbase-hackathon/couchbase-setup
+1. Switch directory
+
+`cd ~/couchbase-hackathon/couchbase-setup`
+
 2. Trigger build
-gcloud builds submit --config cloudbuild-create.yaml .
+
+`gcloud builds submit --config cloudbuild-create.yaml .`
 
 # Updating Couchbase cluster
 
-1. Swith directory
-cd ~/couchbase-hackathon/couchbase-setup
+1. Switch directory
+
+`cd ~/couchbase-hackathon/couchbase-setup`
+
 2. Trigger build
-gcloud builds submit --config cloudbuild-update.yaml .
+
+`gcloud builds submit --config cloudbuild-update.yaml .`
 
