@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: '/bin/bash'
+  args: ['./clean-up-gke.sh']
+options:
+  env: 
+  - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=couchbase-cluster'
