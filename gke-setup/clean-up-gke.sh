@@ -8,7 +8,7 @@ echo "===================================="
 for clusters in  $(gcloud container clusters list --format="value(name)")
 do
   echo "Starting deletion of cluster:  $clusters"   
-  gcloud container clusters delete $clusters --async
+  gcloud container clusters delete $clusters --async --quiet
   echo "$clusters deleted successfully."
 done
 echo "GKE clean-up completed successfully."
