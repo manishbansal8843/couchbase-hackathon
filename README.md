@@ -56,3 +56,14 @@ This will create a 3 node GKE cluster.
 
 `gcloud builds submit --config cloudbuild-update.yaml .`
 
+# GKE clean-up
+
+1. Switch directory
+
+`cd couchbase-hackathon/gke-setup`
+
+2. Trigger build
+
+`gcloud builds submit --config cloudbuild-clean-up.yaml .`
+
+
